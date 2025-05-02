@@ -12,7 +12,8 @@
     "react-router-dom": "^7.5.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "homepage": "https://Anikesh-tech.github.io/artist-jahnvi"
+    "homepage": "https://Anikesh-tech.github.io/myproject"
+
   },
   "scripts": {
     "start": "react-scripts start",
