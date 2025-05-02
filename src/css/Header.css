@@ -1,0 +1,159 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    flex-wrap: nowrap;
+    /* Important for keeping in line */
+}
+
+.header .left,
+.header .center,
+.header .right {
+    flex: 1;
+    text-align: center;
+}
+
+.center {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.header .left {
+    text-align: left;
+}
+
+.header .right {
+    text-align: right;
+}
+
+.header .right a {
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.header .right a:hover {
+    transform: scale(1.2);
+}
+
+.header .right button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    background: #ff7e5f;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.header .right button:hover {
+    background: #ff3e00;
+}
+
+/* Screen ≤ 1280px */
+@media screen and (max-width: 1280px) {
+    .header {
+        padding: 8px 15px;
+        flex-wrap: nowrap;
+        /* still on one line */
+    }
+
+    .header .right a {
+        font-size: 18px;
+    }
+
+    .center {
+        font-size: 18px;
+    }
+}
+
+/* Screen ≤ 1024px */
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 8px 10px;
+        flex-wrap: nowrap;
+        /* stay inline */
+    }
+
+    .header .right a,
+    .header .right button {
+        font-size: 16px;
+    }
+
+    .center {
+        font-size: 17px;
+    }
+
+    .header .left,
+    .header .right {
+        text-align: center;
+    }
+}
+
+/* Screen ≤ 800px */
+@media screen and (max-width: 800px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .header .left,
+    .header .center,
+    .header .right {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .center {
+        font-size: 16px;
+    }
+
+    .header .right a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 16px;
+    }
+
+    .header .right button {
+        margin-top: 6px;
+    }
+}
+
+/* Screen ≤ 500px */
+@media screen and (max-width: 500px) {
+    .header {
+        display: flex;
+
+    }
+
+    .header .left,
+    .header .center,
+    .header .right {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    .center {
+        font-size: 15px;
+    }
+
+    .header .right a {
+        display: block;
+        font-size: 16px;
+        margin: 4px 0;
+    }
+
+    .header .right button {
+        width: 90%;
+        margin-top: 8px;
+    }
+}
